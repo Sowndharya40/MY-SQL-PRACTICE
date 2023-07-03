@@ -1,0 +1,23 @@
+create database EM_0;
+create table employee( employee_id int primary key,
+e_name varchar(30),
+e_salary int,
+e_description varchar(30));
+
+insert into employee values
+	(1,"ram","200000","manager"),
+	(2,"vino","40000","admin"),
+	(3,"gayu","200000","HR"),
+	(4,"kavi","700000","staff"),
+	(5,"dharshu","260000","teacher"),
+	(6,"sound","60000","assistant"),
+	(7,"vimal","80000","selector"),
+	(8,"vijay","600000","checker"),
+	(9,"selvi","50000","accountor"),
+	(10,"sasi","300000","proffesor");
+select * from employee where employee_id=1;
+select employee_id,e_name,e_salary from employee where e_salary>200000;
+select employee_id,e_name,e_salary from employee where e_salary>260000 and e_description ="manager";
+select * from employee where e_description in ("admin ","HR");
+select * from employee where e_description="admin"or e_description="HR";
+select * from employee where e_salary between 200000 and 300000;
